@@ -1,0 +1,25 @@
+commit ddef67715b6ac3c841a364e69c9d4a5a6c134c18
+Author: Diego Terán Ríos <dteran@google.com>
+Date:   Wed Jun 28 14:10:57 2023 -0700
+
+    Removal of canonical GLTF copy + EmissiveStrength and Clearcoat extensions (#4319)
+    
+    * EmissiveStrength and Clearcoat extensions
+    
+    Change from MeshStandardMaterial to MeshPhysicalMaterial
+    
+    * Add Clearcoat Normal Texture Scale
+    
+    * Remove canonical GLTF element from ThreeDOMElement
+    
+    Single source of truth is now the three.js scene graph
+    
+    * Cleanup for space-opera tests
+    
+    * Address review comments.
+    
+    * Reverted tests after adding name functionality
+    
+    * Remove unused `|null` in some ThreeDOMElements
+    
+    textureInfo, material, and threeDomElement still require them for Lazyloading (assigning the correlated amterial after the constructor)
