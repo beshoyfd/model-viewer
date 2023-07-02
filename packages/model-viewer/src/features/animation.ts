@@ -118,7 +118,7 @@ export const AnimationMixin = <T extends Constructor<ModelViewerElementBase>>(
     play(options?: PlayAnimationOptions) {
       if (this.availableAnimations.length > 0) {
         this[$paused] = false;
-
+    console.log("plaay");
         this[$changeAnimation](options);
 
         this.dispatchEvent(new CustomEvent('play'));
